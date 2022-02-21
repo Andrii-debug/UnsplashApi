@@ -39,6 +39,9 @@ function sendRequests() {
            arr[i] = document.createElement('div')
            arr[i].className = 'img'
            arr[i].style.backgroundImage = 'url(' + data.results[i].urls.raw + ')'
+           arr[i].addEventListener('dblclick', function() {
+            window.open(data.results[i].links.download, '_blank')
+           })
            grid.appendChild(arr[i])
        } 
     }
